@@ -1,0 +1,13 @@
+[project]
+name = "dspy-tutorial"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alfworld==0.3.5",
+    "datasets>=2.2.1",
+    "dspy>=3.0.3",
+    "multiprocess>=0.70.18",
+    "pyarrow==20.0.0",
+]

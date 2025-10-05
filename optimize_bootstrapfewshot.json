@@ -1,0 +1,51 @@
+{
+  "predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "How do I deploy a model to Azure Machine Learning?",
+        "reasoning": "To deploy a trained machine learning model to Azure Machine Learning, you can use the Azure Machine Learning SDK or the Azure portal. The process typically involves creating an Azure Machine Learning workspace, registering your model, and then deploying it as a web service or a batch endpoint.",
+        "answer": "You can deploy a model to Azure Machine Learning by following these steps:\n\n1. Create an Azure Machine Learning workspace.\n2. Register your model using the Azure Machine Learning SDK or the Azure portal.\n3. Deploy your model as a web service or a batch endpoint using the Azure Machine Learning SDK or the Azure portal."
+      },
+      {
+        "augmented": true,
+        "question": "What’s the difference between Azure Functions and Logic Apps?",
+        "reasoning": "Azure Functions is a serverless compute service that allows you to run small code snippets in response to events, whereas Logic Apps is a workflow automation service that enables you to create workflows by connecting different services and APIs.",
+        "answer": "Azure Functions is ideal for processing individual requests or events, such as handling HTTP requests or processing messages from Azure Storage. Logic Apps, on the other hand, is better suited for automating complex workflows involving multiple steps, services, and data sources."
+      },
+      {
+        "augmented": true,
+        "question": "How can I scale my Azure App Service?",
+        "reasoning": "To scale an Azure App Service, you can adjust the number of instances or use autoscaling to automatically add or remove instances based on traffic. You can also consider using a load balancer and multiple regions for high availability.",
+        "answer": "You can scale your Azure App Service by:\n\n* Increasing the instance count: Go to the Azure portal, navigate to your App Service plan, click on \"Scale up\" and select the desired number of instances.\n* Using autoscaling: Configure autoscaling rules based on metrics such as CPU usage or request volume.\n* Using a load balancer: Distribute traffic across multiple instances for high availability.\n* Deploying in multiple regions: Use Azure's global infrastructure to deploy your App Service in multiple regions and automatically route traffic."
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `answer`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.3",
+      "cloudpickle": "3.1"
+    }
+  }
+}

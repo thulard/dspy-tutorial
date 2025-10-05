@@ -1,0 +1,55 @@
+{
+  "predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Nancy bought a pie sliced it into 8 pieces. She gave 1/2 to Joe and Darcy, and she gave 1/4 to Carl. How many slices were left?",
+        "reasoning": "Nancy started with 8 slices. She gave 1/2 of the pie away, which is 4 slices (since 1/2 of 8 is 4). Then, she gave 1/4 of the remaining pie away, which is 2 slices (since 1/4 of 4 is 2). So, she gave a total of 4 + 2 = 6 slices away. To find out how many slices are left, we subtract the number of slices given away from the original number of slices: 8 - 6 = 2.",
+        "answer": "2"
+      },
+      {
+        "augmented": true,
+        "question": "Sarah buys 20 pencils on Monday. Then she buys 18 more pencils on Tuesday. On Wednesday she buys triple the number of pencils she did on Tuesday. How many pencils does she have?",
+        "reasoning": "Sarah starts with 20 pencils on Monday, then adds 18 more on Tuesday, making a total of 38 pencils. On Wednesday, she buys triple the amount she bought on Tuesday, which is 3 x 18 = 54 pencils. Adding this to her total, Sarah now has 38 + 54 = 92 pencils.",
+        "answer": "92"
+      },
+      {
+        "question": "Louise is baking cakes for a gathering. She needs 60 cakes in total, and has already produced half this many. Today, she calculates how many cakes she has left to make and bakes half this amount. The next day, she again calculates how many cakes she has left to make and bakes a third of this amount. How many more cakes does Louise need to bake?",
+        "gold_reasoning": "Louise has already produced 60 cakes / 2 = <<60/2=30>>30 cakes. After calculating how many cakes are left, she bakes another 30 cakes / 2 = <<30/2=15>>15 cakes. The next day, she calculates again then bakes another 15 cakes / 3 = <<15/3=5>>5 cakes. She therefore still needs to bake 60 – 30 – 15 – 5 = <<60-30-15-5=10>>10 cakes.",
+        "answer": "10"
+      },
+      {
+        "question": "Mary does her grocery shopping on Saturday. She does her shopping only at a specific store where she is allowed a credit of $100, which must be paid in full before her next shopping trip. That week she spent the full credit limit and paid $15 of it on Tuesday and $23 of it on Thursday. How much credit will Mary need to pay before her next shopping trip?",
+        "gold_reasoning": "So far, Mary has paid back $15 +$23=$<<15+23=38>>38 of the credit. So she still needs to pay $100-$38=$<<100-38=62>>62",
+        "answer": "62"
+      }
+    ],
+    "signature": {
+      "instructions": "Given a math-based reasoning question, generate a solution including both the answer and step-by-step reasoning process.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.3",
+      "cloudpickle": "3.1"
+    }
+  }
+}
