@@ -52,7 +52,7 @@ def metric(gold, pred, trace=None):
 
 
 # --- Step 6: Initialize the optimizer ---
-optimizer = dspy.BootstrapFewShot(metric=metric)
+# optimizer = dspy.BootstrapFewShot(metric=metric)
 optimizer = dspy.MIPROv2(metric=metric, verbose=True)
 
 # --- Step 7: Run optimization   ---
